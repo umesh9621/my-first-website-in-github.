@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?flowers,birthday') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            margin-top: 100px;https://github.com/umesh9621/my-first-website-in-github
+        }
+        h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background: #ff4081;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #e91e63;
+        }
+        .surprise-board {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        .close-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .wish-box {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .wish-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday! 🎂</h1>
+        <p>Wishing you a wonderful day filled with joy and happiness! 🌸✨</p>
+        <br>
+        <button class="btn" onclick="showSurprise()">Click for Surprise! 🎁</button>
+    </div>
+
+    <div class="surprise-board" id="surpriseBoard">
+        <h2>🎊 Surprise! 🎈</h2>
+        <p>Hope you have an amazing year ahead! 🎂🎁</p>
+        <button class="close-btn" onclick="hideSurprise()">Close</button>
+    </div>
+
+    <div class="wish-box">
+        <h2>Leave Your Birthday Wishes! 🎉</h2>
+        <textarea id="wishMessage" placeholder="Write your wishes here..."></textarea>
+        <br>
+        <button class="wish-btn" onclick="showWish()">Submit Wish</button>
+        <p id="displayWish"></p>
+    </div>
+
+    <script>
+        function showSurprise() {
+            document.getElementById("surpriseBoard").style.display = "block";
+        }
+        function hideSurprise() {
+            document.getElementById("surpriseBoard").style.display = "none";
+        }
+        function showWish() {
+            var wish = document.getElementById("wishMessage").value;
+            document.getElementById("displayWish").innerText = "🎈 Someone wished: " + wish;
+        }
+    </script>
+</body>
+</html>
